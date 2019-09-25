@@ -24,20 +24,11 @@ Create a spring-xml-demo repo and push the code to master branch.
 
 public class Main {
 
-    public  static  void main(String gopal []) {
+    public  static <BeanLifecycleDemoBean> void main(String args []) {
 
-        XmlBeanFactory xmlBeanFactory= new XmlBeanFactory ( new ClassPathResource("BeanFile.xml"));
-        Movie movieFirst= (Movie)xmlBeanFactory.getBean("movie1");
-
-
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("BeanFile.xml");
-        Movie movie=(Movie)applicationContext.getBean("movie2");
-
-
-        System.out.println(movieFirst.getActor());
-        System.out.println(movie.getActor());
-
-        // BeanDefinitionRegistry beanDefinitionRegistry= new BeanDefinitionReader("BeanFile.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
+        ((ClassPathXmlApplicationContext) applicationContext).registerShutdownHook();
+        BeanLifecycleDemoBean beanLifeCycleDemo = (BeanLifecycleDemoBean) applicationContext.getBean("cycle");
 
     }
 }
