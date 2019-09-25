@@ -3,7 +3,7 @@ package com.stackroute.domain;
 public class Movie {
 
     Actor actor;
-    public Actor getActor() {
+    public  Actor getActor() {
         return actor;
     }
 
