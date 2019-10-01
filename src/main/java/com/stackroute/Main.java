@@ -24,9 +24,9 @@ Create a spring-xml-demo repo and push the code to master branch.
 
 public class Main {
 
-    public  static  void main(String gopal []) {
+    public  static  void main(String args []) {
 
-        XmlBeanFactory xmlBeanFactory= new XmlBeanFactory ( new ClassPathResource("BeanFile.xml"));
+        XmlBeanFactory xmlBeanFactory= new XmlBeanFactory( new ClassPathResource("BeanFile.xml"));
         Movie movieFirst= (Movie)xmlBeanFactory.getBean("movie1");
 
 
@@ -37,7 +37,6 @@ public class Main {
         System.out.println(movieFirst.getActor());
         System.out.println(movie.getActor());
 
-        // BeanDefinitionRegistry beanDefinitionRegistry= new BeanDefinitionReader("BeanFile.xml");
 
     }
 }

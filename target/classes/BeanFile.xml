@@ -13,7 +13,7 @@
     </bean>
 
     <bean id="actor2" class="com.stackroute.domain.Actor">
-        <property name="name" value="Farhaan" />
+        <property name="name" value="karan" />
         <property name="gender" value="male" />
         <property name="age" value="22" />
 
